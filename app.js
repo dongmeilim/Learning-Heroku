@@ -5,10 +5,10 @@ const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/html');
   res.end('<h1>What is up?</h1></h2>HHHHHHHIIII</h2>');
+  let dataFile = require('./smym-data.json');
+  let stringData = JSON.stringify(dataFile);
+  console.log(stringData);
 });
-
-let dataFile = require('./smym-data.json');
-console.log(dataFile.data[0].Summary);
 
 server.listen(port,() => {
   console.log(`Server running at port `+port);
